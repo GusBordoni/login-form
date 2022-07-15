@@ -16,15 +16,98 @@
 
 body {
     background-color: var(--background);
-}
-
-.backdiv {
+    display: flex;
+    width: 100%;
     height: 100vh;
-    width: 100vw;
-    background-image: url(images/side-image.jpg);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-position-y: top;
-    background-size: auto 105vh;
 }
 
+.form-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.camp-bg {
+    flex: 1;
+    background-image: url(images/side-image.jpg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: saturate(105%) contrast(125%);
+}
+
+.form-wrapper > img {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.form-box {
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+    background-color: var(--form-background);
+    color: var(--text-base);
+}
+
+fieldset {
+    width: 80%;
+    min-width: 310px;
+    max-width: 400px;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+fieldset a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.container-pw {
+    display: flex;
+    justify-content: space-between;
+}
+.container-pw div {
+    display: flex;
+    flex: 1;
+    white-space: nowrap;
+}
+
+.container-pw > div:nth-child(2) {
+    justify-items: end;
+}
+
+.yellow {
+    color: #ffc632;
+}
+
+#email, #password {
+    background-color: transparent;
+    border: 1px solid var(--text-base);
+    border-radius: 10px;
+    color: var(--text-base);
+    padding: 15px 20px 15px 40px;
+    width: 100%;
+    margin: 10px 0;
+    font: inherit;
+}
+
+label {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.container-pw > div:nth-child(1) > label:nth-child(2) {
+    font-weight: 300;
+    padding: 10px;
+}
+
+::-webkit-input-placeholder, ::-moz-placeholder { /* WebKit browsers */
+    color: var(--text-base);
+    opacity: 1;
+}

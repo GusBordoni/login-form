@@ -1,0 +1,24 @@
+@media only screen and (max-width: 1024px) {
+    .camp-bg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .form-box {
+        width: 86%;
+        background-color: transparent;
+    }
+    fieldset {
+        width: unset;
+        min-width: 310px;
+        max-width: unset;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .form-box {
+        width: 96%;
+    }
+}
