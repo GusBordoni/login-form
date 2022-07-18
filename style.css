@@ -46,9 +46,21 @@ body {
 .form-box {
     width: 80%;
     height: 70%;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: var(--form-background);
     color: var(--text-base);
+}
+
+.login-title {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.login-intro {
+    font: 500 1.75em 'Roboto', sans-serif;
+    color: var(--text-title);
+    padding-left: 10px;
 }
 
 fieldset {
@@ -56,7 +68,7 @@ fieldset {
     min-width: 310px;
     max-width: 400px;
     border: none;
-    padding: 10px;
+    padding: 25px 10px 10px 10px;
     font-size: 1.2em;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -68,6 +80,10 @@ fieldset a {
     font-weight: 500;
 }
 
+legend { 
+    font-weight: 400;
+}
+
 .container-pw {
     display: flex;
     justify-content: space-between;
@@ -76,6 +92,7 @@ fieldset a {
     display: flex;
     flex: 1;
     white-space: nowrap;
+    align-content: center;
 }
 
 .container-pw > div:nth-child(2) {
@@ -84,17 +101,117 @@ fieldset a {
 
 .yellow {
     color: #ffc632;
+    align-self: center;
+    font-size: 1.05rem;
 }
 
 #email, #password {
     background-color: transparent;
     border: 1px solid var(--text-base);
-    border-radius: 10px;
+    outline: 1px solid transparent;
+    border-radius: 8px;
     color: var(--text-base);
-    padding: 15px 20px 15px 40px;
+    padding: 15px 20px 15px 50px;
     width: 100%;
     margin: 10px 0;
     font: inherit;
+    transition: border .3s, outline .3s;
+}
+
+#email {
+    background: url(images/mail.svg) no-repeat scroll 15px 17px;
+    background-size: 25px 25px;
+}
+
+#password {
+    background: url(images/lock.svg) no-repeat scroll 15px 17px;
+    background-size: 25px 25px;
+}
+
+#email:focus-within, #password:focus-within {
+    border: 1px solid var(--primary-color);
+    outline: 1px solid var(--primary-color);
+    transition: border .3s, outline .3s;
+}
+
+#email:focus-within {
+    background: url(images/mail-focus.svg) no-repeat scroll 15px 17px;
+    background-size: 25px 25px;
+}
+
+#password:focus-within {
+    background: url(images/lock-focus.svg) no-repeat scroll 15px 17px;
+    background-size: 25px 25px;
+}
+
+.toggle-pw {
+    float: right;
+    transform: translate(-15px, -50px);
+}
+
+.toggle-pw:hover {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(93%) sepia(7%) saturate(463%) hue-rotate(187deg) brightness(91%) contrast(97%);
+}
+
+
+.remember-container {
+    display: block;
+    position: relative;
+    padding-left: 1.85em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font: 400 1.05rem 'Roboto', sans-serif;
+    line-height: 1.75rem;
+}
+
+.remember-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.remember-container:hover {
+    color: #d0d7e4;
+}
+
+.custom-checkbox {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 1px solid var(--text-base);
+    border-radius: 5px;
+}
+
+.remember-container:hover .custom-checkbox {
+    border: 1px solid #d0d7e4;
+    background-color: #d0d7e413;
+}
+
+.remember-container input:checked ~ .custom-checkbox {
+    background-color: var(--primary-color);
+    border: 1px solid transparent;
+}
+
+.custom-checkbox:after {
+    content: url(images/check.svg);
+    position: absolute;
+    display: none;
+    transform: scale(1.25);
+    left: 1px;
+    top: 2px;
+}
+  
+.remember-container input:checked ~ .custom-checkbox:after {
+    display: block;
 }
 
 label {
@@ -102,12 +219,33 @@ label {
     font-weight: 500;
 }
 
-.container-pw > div:nth-child(1) > label:nth-child(2) {
-    font-weight: 300;
-    padding: 10px;
+.container-pw > div:nth-child(2) {
+    justify-content: end;
 }
 
-::-webkit-input-placeholder, ::-moz-placeholder { /* WebKit browsers */
+::-webkit-input-placeholder, ::-moz-placeholder { /* WebKit browsers - disable input opacity on FF */
     color: var(--text-base);
     opacity: 1;
+}
+
+button {
+    width: 100%;
+    border: 1px solid transparent;
+    background-color: var(--primary-color);
+    color: #463412;
+    font: 600 1.25em 'Poppins', sans-serif;
+    padding: 15px 0;
+    margin: 25px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--form-background);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    white-space: pre;
 }

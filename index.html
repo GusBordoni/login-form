@@ -15,6 +15,10 @@
     <div class="form-wrapper">
         <img src="images/logo.svg" alt="">
         <div class="form-box">
+            <div class="login-title">
+                <img src="images/log-in.svg" alt="">
+                <span class="login-intro">Faça seu login</span>
+            </div>
             <form action="" method="" id="login-form">
                 <fieldset>
                     <legend>Entre com suas informações de cadastro.</legend>
@@ -23,24 +27,38 @@
                     <br><br>
                     <label for="password">Senha</label><br>
                     <input type="password" id="password" name="password" placeholder="Digite sua senha" minlength="8" required>
+                    <img src="images/eye.svg" class="toggle-pw" alt="" onclick="togglePW()">
                     <br><br>
                     <div class="container-pw">
                         <div>
-                            <input type="checkbox" name="remember" id="remember" >
-                            <label for="remember">Lembre-me</label>
+                            <label class="remember-container">Lembre-me
+                                <input type="checkbox" name="remember" id="remember">
+                                <span class="custom-checkbox"></span>
+                            </label>
                         </div>
                         <div>
                             <a href="#" class="yellow">Esqueci minha senha</a>
                         </div>
                     </div>
-                    <button type="submit" form="login-form">Entrar</button>
-                    <p class="yellow">Não tem uma conta? <a href="#">Registre-se</a></p>
+                    <button type="submit" form="login-form">ENTRAR</button>
+                    <p class="yellow center">Não tem uma conta? <a href="#">Registre-se</a></p>
                 </fieldset>
             </form>
         </div>
     </div>
     <div class="camp-bg">
-        background car
+        <!-- background img -->
     </div>
+
+    <script>
+        function togglePW() {
+          var x = document.getElementById("password");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+        </script>
 </body>
 </html>

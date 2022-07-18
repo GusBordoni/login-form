@@ -1,10 +1,16 @@
 @media only screen and (max-width: 1024px) {
+    .form-wrapper > img {
+        left: 10%;
+    }
     .camp-bg {
         display: none;
     }
 }
 
 @media only screen and (max-width: 480px) {
+    .form-wrapper > img {
+        left: 7%;
+    }
     .form-box {
         width: 86%;
         background-color: transparent;
@@ -13,11 +19,14 @@
         width: unset;
         min-width: 310px;
         max-width: unset;
-        padding: 0;
+        padding: 25px 0 0 0;
     }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 320px) {
+    .form-wrapper > img {
+        left: 32%;
+      }
     .form-box {
         width: 96%;
     }
