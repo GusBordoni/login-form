@@ -5,6 +5,17 @@
     .camp-bg {
         display: none;
     }
+    fieldset {
+        width: 100%;
+        max-width: 600px;
+    }
+    #login-form {
+        display: flex;
+        justify-content: center;
+    }
+    .login-title {
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -14,6 +25,7 @@
     .form-box {
         width: 86%;
         background-color: transparent;
+        padding: unset;
     }
     fieldset {
         width: unset;
@@ -21,13 +33,29 @@
         max-width: unset;
         padding: 25px 0 0 0;
     }
+    .login-title {
+        justify-content:start;
+    }
 }
 
 @media only screen and (max-width: 320px) {
     .form-wrapper > img {
         left: 32%;
       }
+
     .form-box {
-        width: 96%;
+        width: 90%;
     }
+
+    legend {
+        font-size: .75em;
+    }
+
+    fieldset {
+        min-width: 290px;
+    }
+
+    .yellow {
+        font-size: .85rem;
+      }
 }

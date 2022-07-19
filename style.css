@@ -49,12 +49,14 @@ body {
     border-radius: 8px;
     background-color: var(--form-background);
     color: var(--text-base);
+    padding: 25px;
 }
 
 .login-title {
     display: flex;
     align-items: center;
     margin: 20px 0;
+    justify-content: start;
 }
 
 .login-intro {
@@ -63,10 +65,15 @@ body {
     padding-left: 10px;
 }
 
+#login-form {
+    display: flex;
+    justify-content: center;
+}
+
 fieldset {
-    width: 80%;
+    width: 100%;
     min-width: 310px;
-    max-width: 400px;
+    max-width: 600px;
     border: none;
     padding: 25px 10px 10px 10px;
     font-size: 1.2em;
@@ -154,6 +161,9 @@ legend {
     filter: brightness(0) saturate(100%) invert(93%) sepia(7%) saturate(463%) hue-rotate(187deg) brightness(91%) contrast(97%);
 }
 
+.yellow-eye, .yellow-eye:hover {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(22%) saturate(3490%) hue-rotate(331deg) brightness(105%) contrast(101%);
+}
 
 .remember-container {
     display: block;
